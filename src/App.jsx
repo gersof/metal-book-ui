@@ -7,7 +7,8 @@ import {
   Route,
   Link,
   useRouteMatch
-} from "react-router-dom";;
+} from "react-router-dom";
+
 function App() {
   return (
     <>

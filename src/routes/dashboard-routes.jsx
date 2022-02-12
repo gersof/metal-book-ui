@@ -1,4 +1,5 @@
 import React from "react";
+import ViewBandsPage from "../pages/bands/view-bands";
 import {
     BrowserRouter as Router,
     Switch,
@@ -15,15 +16,18 @@ export default function DashboardRoutes() {
     return (
         <Router>
             <Switch>
+                <Route exact path="/">
+                    <HomePage />
+                </Route>
                 <Route exact path={`${path}/home`}>
                     <HomePage />
                 </Route>
                 <Route exact path={`${path}/band/new-band`}>
                     <CreateBandPage />
-                </Route>                
-                <Route path="/">
-                    <HomePage />
                 </Route>
+                <Route exact path={`${path}/bands`}>
+                    <ViewBandsPage />
+                </Route>                 
             </Switch>
         </Router>
     );
